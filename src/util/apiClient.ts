@@ -1,6 +1,7 @@
 import userData from '../data/userData';
 
-const headers = () => new Headers({ Authorization: 'Bearer ceWKK7Jpuc7dTTZl' });
+const headers = () =>
+    new Headers({ Authorization: `Bearer ${userData.personalToken}` });
 
 export default {
     getAccountInfo: () => createRequest('account', 'GET'),
